@@ -15,6 +15,8 @@ const CertificateCard = styled(motion.div)`
   margin: 20px;
   background-color: ${({ theme }) => theme.cardBackground};
   border-radius: 8px;
+  border: 2px solid ${({ theme }) => theme.accent}; /* Nuevo */
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 

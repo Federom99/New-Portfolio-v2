@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { useLanguage } from "./LanguageContext";
+import translations from "./translations";
+import usFlag from "../../src/images/Flag_of_the_United_States_(DoS_ECA_Color_Standard).svg.png";
+import esFlag from "../../src/images/sp-flag.jpg"
 
 const NavbarContainer = styled.nav`
   position: fixed;
@@ -30,6 +34,8 @@ const NavLinks = styled.div`
 
     &:hover {
       text-decoration: underline;
+    color: ${({ theme }) => theme.linkHoverColor};
+
     }
   }
 `;
@@ -44,26 +50,57 @@ const ThemeSwitcher = styled.button`
 
   &:hover {
     text-decoration: underline;
+    color: ${({ theme }) => theme.linkHoverColor};
+
+  }
+`;
+
+const FlagContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
+const FlagButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  img {
+    width: 24px;
+    height: 24px;
   }
 `;
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ toggleTheme, theme }) => {
-  return (
+
+  const { language, toggleLanguage } = useLanguage();
+
+ return (
     <NavbarContainer>
       <NavLinks>
-        <Link to="/">Home</Link>
-        <Link to="/skills">Skills</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/certificates">Certificates</Link>
+        <Link to="/">{translations[language].home}</Link>
+        <Link to="/skills">{translations[language].skills}</Link>
+        <Link to="/projects">{translations[language].projects}</Link>
+        <Link to="/certificates">{translations[language].certificates}</Link>
       </NavLinks>
-      <ThemeSwitcher onClick={toggleTheme}>
-        {theme === "light" ? (
-          <FontAwesomeIcon icon={faMoon} />
-        ) : (
-          <FontAwesomeIcon icon={faSun} />
-        )}
-      </ThemeSwitcher>
+      <FlagContainer>
+        <FlagButton onClick={() => toggleLanguage('en')}>
+          <img src={usFlag} alt="English" />
+        </FlagButton>
+        <FlagButton onClick={() => toggleLanguage('es')}>
+          <img src={esFlag} alt="Español" />
+        </FlagButton>
+        <ThemeSwitcher onClick={toggleTheme}>
+          {theme === "light" ? (
+            <FontAwesomeIcon icon={faMoon} />
+          ) : (
+            <FontAwesomeIcon icon={faSun} />
+          )}
+        </ThemeSwitcher>
+      </FlagContainer>
     </NavbarContainer>
   );
 };

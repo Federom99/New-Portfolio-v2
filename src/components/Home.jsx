@@ -3,6 +3,8 @@ import { useSpring, animated } from "react-spring";
 import Footer from "./Footer";
 import myImage from "../../src/images/1714505814025.jpeg";
 import Typing from "react-typing-effect";
+import { useLanguage } from "./LanguageContext";
+import translations from "./translations";
 
 const HomeContainer = styled.div`
   display: flex;
@@ -65,6 +67,7 @@ const AnimatedIntroductionText = styled(animated.div)`
 `;
 
 const Home = () => {
+  const { language } = useLanguage(); 
   const props = useSpring({
     opacity: 1,
     from: { opacity: 0 },
@@ -81,7 +84,7 @@ const Home = () => {
     <HomeContainer>
       <TypingHeader>
         <Typing
-          text={["Hello, I'm Federico Romero!"]}
+          text={[translations[language].greeting]}
           speed={70}
           eraseSpeed={50}
           eraseDelay={1000}
@@ -92,7 +95,7 @@ const Home = () => {
       <br />
       <TypingHeader>
         <Typing
-          text={["FullStack Software Engineer."]}
+          text={[translations[language].role]}
           speed={70}
           eraseSpeed={50}
           eraseDelay={1000}
@@ -102,18 +105,9 @@ const Home = () => {
       </TypingHeader>
       
       <AnimatedIntroductionText style={props}>
-        <p>
-          At 24 years old, I am constantly looking for opportunities to grow and
-          learn in the world of technology.
-        </p>
-        <p>My approach at work is based on organization and responsibility.</p>
-        <p>
-          I am passionate about teamwork and adapt quickly to any situation.
-        </p>
-        <p>
-          I have a C1 level of English and I am determined to perfect it even
-          further.
-        </p>
+        {translations[language].introduction.map((line, index) => (
+          <p key={index}>{line}</p>
+        ))}
       </AnimatedIntroductionText>
 
       <ImageContainer style={imageProps}>
@@ -121,12 +115,7 @@ const Home = () => {
       </ImageContainer>
 
       <DiagonalText style={props}>
-        In this portfolio, you can learn more about me. My technical and soft
-        skills. My projects, my certifications. You can also choose between a
-        light or dark theme. And you can translate to English or Spanish. You
-        can also check my contributions in GitLab or GitHub. And you can contact
-        me on LinkedIn or by Email. I am open to new opportunities and
-        challenges. Do not hesitate to contact me!
+        {translations[language].diagonalText}
       </DiagonalText>
 
       <FooterContainer style={props}>

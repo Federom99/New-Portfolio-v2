@@ -9,13 +9,14 @@ import Home from './components/Home';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
+import { LanguageProvider } from './components/LanguageContext';
 
 const App = () => {
   const [theme, setTheme] = useState('light');
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {
-      console.log("Current theme:", prevTheme); // Agregar esta línea para depurar
+
       return prevTheme === 'light' ? 'dark' : 'light';
     });
   };
@@ -24,7 +25,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyles />
-
+        <LanguageProvider> 
       <Router>
         <Navbar toggleTheme={toggleTheme} theme={theme} />
         <Routes>
@@ -47,6 +48,7 @@ const App = () => {
         </Routes>
         {/* <Footer /> */}
       </Router>
+      </LanguageProvider>
     </ThemeProvider>
   );
 };
