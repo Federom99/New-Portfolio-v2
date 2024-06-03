@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
 
   h3 {
     color: ${({ theme }) => theme.accent};
-    margin-left: 10px
+    margin-left: 43px
   }
   h1 {
     color: ${({ theme }) => theme.accent};

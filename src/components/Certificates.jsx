@@ -53,7 +53,7 @@ const Certificates = () => {
     if (showCertificates) {
       controls.start((i) => ({
         opacity: 1,
-        transition: { delay: i * 0.2 },
+        transition: { delay: i * 0.3 },
       }));
     }
   }, [controls, showCertificates]);
@@ -61,7 +61,7 @@ const Certificates = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowCertificates(true);
-    }, 1000);
+    }, 100);
   }, []);
 
   return (

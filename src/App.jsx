@@ -46,7 +46,6 @@ const App = () => {
               element={<Certificates />}
             />
         </Routes>
-        {/* <Footer /> */}
       </Router>
       </LanguageProvider>
     </ThemeProvider>

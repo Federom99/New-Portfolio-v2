@@ -51,6 +51,8 @@ const Column = styled.div`
   position: relative;
   left: 184px;
   top: 70px;
+  white-space: nowrap
+
 
   h3 {
     font-size: 25px;
@@ -69,6 +71,8 @@ const Column = styled.div`
   li {
     margin-bottom: 12px;
     cursor: pointer;
+  white-space: nowrap
+
   }
 `;
 
@@ -122,7 +126,6 @@ const SkillTooltip = styled(motion.div)`
 const ParagraphItem = styled(SkillItem)`
   background: ${({ theme }) => theme.gradient};
   border-radius: 20px;
-
   max-width: 700px;
   position: relative;
   bottom: 40px;
