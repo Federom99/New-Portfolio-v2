@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import henry from "../../src/images/henry.png"
+import javas from "../../src/images/javas.png"
+import web from "../../src/images/webb.png"
+import ingles from "../../src/images/ingless.png"
+import aws from "../../src/images/AWS Certified Cloud Practitioner certificate_page-0001.jpg"
 
 const CertificatesContainer = styled.div`
   display: flex;
@@ -48,13 +52,12 @@ const CertificateImage = styled.img`
 
 const certificatesData = [
   { id: 1, imageUrl: henry },
-  { id: 2, imageUrl: "../../src/images/javas.png" },
-  { id: 3, imageUrl: "../../src/images/webb.png" },
-  { id: 4, imageUrl: "../../src/images/ingless.png" },
+  { id: 2, imageUrl: javas},
+  { id: 3, imageUrl: web },
+  { id: 4, imageUrl: ingles },
   {
     id: 5,
-    imageUrl:
-      "../../src/images/AWS Certified Cloud Practitioner certificate_page-0001.jpg",
+    imageUrl: aws,
   },
 ];
 
