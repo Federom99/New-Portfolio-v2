@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
+import henry from "../../src/images/henry.png"
 
 const CertificatesContainer = styled.div`
   display: flex;
@@ -46,7 +47,7 @@ const CertificateImage = styled.img`
 `;
 
 const certificatesData = [
-  { id: 1, imageUrl: "../../src/images/henry.svg" },
+  { id: 1, imageUrl: henry },
   { id: 2, imageUrl: "../../src/images/javas.png" },
   { id: 3, imageUrl: "../../src/images/webb.png" },
   { id: 4, imageUrl: "../../src/images/ingless.png" },
