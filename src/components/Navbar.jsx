@@ -50,8 +50,8 @@ const NavLinks = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 13px;
-    gap: 0.5rem;
+    font-size: 11px;
+    gap: 0.2rem;
     margin-left: 5px;
   }
 `;
@@ -76,7 +76,7 @@ const ThemeSwitcher = styled.button`
 
   @media (max-width: 480px) {
     top: 5px;
-    right: 22px;
+    right: 0px;
     font-size: 1.3rem;
     position: relative;
   }
