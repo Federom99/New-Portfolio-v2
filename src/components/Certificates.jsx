@@ -51,14 +51,14 @@ const CertificateImage = styled.img`
 `;
 
 const certificatesData = [
-  { id: 1, imageUrl: henry },
-  { id: 2, imageUrl: javas},
-  { id: 3, imageUrl: web },
-  { id: 4, imageUrl: ingles },
   {
     id: 5,
     imageUrl: aws,
   },
+  { id: 4, imageUrl: ingles },
+  { id: 2, imageUrl: javas},
+  { id: 1, imageUrl: henry },
+  { id: 3, imageUrl: web },
 ];
 
 const Certificates = () => {

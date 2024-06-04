@@ -224,6 +224,7 @@ const Projects = () => {
           margin: "auto",
           fontFamily: "'Quicksand', sans-serif",
           fontSize: "1.3rem",
+          padding: "20px",
         }}
       >
         {language === "en"
