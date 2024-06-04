@@ -38,6 +38,18 @@ const NavLinks = styled.div`
 
     }
   }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    gap: 1rem;
+    margin-left: 10px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+    gap: 0.5rem;
+    margin-left: 5px;
+  }
 `;
 
 const ThemeSwitcher = styled.button`
@@ -53,12 +65,32 @@ const ThemeSwitcher = styled.button`
     color: ${({ theme }) => theme.linkHoverColor};
 
   }
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-right: 5rem;
+  }
+
+  @media (max-width: 480px) {
+    top: 4px;
+    right: 15px;
+    font-size: 1.4rem;
+    position: relative;
+  }
 `;
 
 const FlagContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 10px;
+        margin-left: 7px;
+        gap: 0.7rem;
+  }
 `;
 
 const FlagButton = styled.button`
@@ -71,6 +103,15 @@ const FlagButton = styled.button`
     width: 24px;
     height: 24px;
   }
+  @media (max-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 480px) {
+    width: 18px;
+    height: 18px;
+  }
 `;
 
 // eslint-disable-next-line react/prop-types
@@ -78,7 +119,7 @@ const Navbar = ({ toggleTheme, theme }) => {
 
   const { language, toggleLanguage } = useLanguage();
 
- return (
+  return (
     <NavbarContainer>
       <NavLinks>
         <Link to="/">{translations[language].home}</Link>

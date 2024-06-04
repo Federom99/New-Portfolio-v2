@@ -24,6 +24,18 @@ const CertificateCard = styled(motion.div)`
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
+
+  @media (max-width: 1024px) {
+    width: 40%; /* Ajustar el tamaño de la tarjeta en dispositivos más pequeños */
+    height: 40%;
+    margin: 15px; /* Reducir el margen en dispositivos más pequeños */
+  }
+
+  @media (max-width: 768px) {
+    width: 80%; /* Ajustar el tamaño de la tarjeta en dispositivos móviles */
+    height: 80%;
+    margin: 10px; /* Reducir el margen en dispositivos móviles */
+  }
 `;
 
 const CertificateImage = styled.img`
