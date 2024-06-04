@@ -23,11 +23,20 @@ const ImageContainer = styled(animated.div)`
   position: relative;
   left: 1000px;
   bottom: 350px;
+  @media (max-width: 768px) {
+    position: relative;
+    left: 0px;
+    bottom: 223px;
+  }
 `;
 
 const Image = styled(animated.img)`
   width: 250px;
   border-radius: 50%;
+  @media (max-width: 768px) {
+    width: 109px;
+    border-radius: 50%;
+  }
 `;
 
 const FooterContainer = styled(animated.div)`
@@ -35,6 +44,12 @@ const FooterContainer = styled(animated.div)`
   bottom: 0;
   left: 20px;
   font-size: 1.5rem;
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 944px;
+    left: 20px;
+    font-size: 1.1rem;
+  }
 `;
 
 const DiagonalText = styled(animated.div)`
@@ -45,6 +60,15 @@ const DiagonalText = styled(animated.div)`
   right: 140px;
   background: ${({ theme }) => theme.gradient};
   border-radius: 20px;
+  @media (max-width: 768px) {
+    margin-left: 11px;
+    font-size: 1rem;
+    max-width: 499px;
+    position: absolute;
+    bottom: -172px;
+    right: 11px;
+    border-radius: 20px;
+  }
 `;
 
 const TypingHeader = styled.div`
@@ -57,6 +81,15 @@ const TypingHeader = styled.div`
   color: ${({ theme }) => theme.background};
   padding: 0.5rem;
   border-radius: 20px;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    position: relative;
+    bottom: 20px;
+    right: 0px;
+    text-align: left;
+    padding: 0.5rem;
+    border-radius: 20px;
+  }
 `;
 
 const AnimatedIntroductionText = styled(animated.div)`
@@ -64,6 +97,15 @@ const AnimatedIntroductionText = styled(animated.div)`
   text-align: left;
   border-radius: 20px;
   background: ${({ theme }) => theme.gradient};
+  @media (max-width: 768px) {
+    margin-bottom: 260px;
+    /* margin-left: -2px; */
+    /* bottom: 120px; */
+    width: 298px;
+    font-size: 1rem;
+    text-align: left;
+    border-radius: 20px;
+  }
 `;
 
 const Home = () => {

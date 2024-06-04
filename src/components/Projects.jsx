@@ -9,6 +9,11 @@ const ProjectsContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   font-family: "Quicksand", sans-serif;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `;
 
 const ProjectCard = styled(motion.div)`
@@ -28,6 +33,12 @@ const ProjectCard = styled(motion.div)`
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
 `;
 
 const ProjectTitle = styled.h3`
@@ -42,6 +53,10 @@ const ProjectDescription = styled.p`
   bottom: 20px;
   color: ${({ theme }) => theme.text};
   flex-grow: 1;
+
+  @media (max-width: 768px) {
+    bottom: 0;
+  }
 `;
 
 const ButtonContainer = styled.div`

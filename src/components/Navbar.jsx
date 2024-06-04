@@ -19,6 +19,10 @@ const NavbarContainer = styled.nav`
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  @media (max-width: 768px) {
+    width: auto;
+    height: auto;
+  }
 `;
 
 const NavLinks = styled.div`
@@ -71,9 +75,9 @@ const ThemeSwitcher = styled.button`
   }
 
   @media (max-width: 480px) {
-    top: 4px;
-    right: 15px;
-    font-size: 1.4rem;
+    top: 5px;
+    right: 22px;
+    font-size: 1.3rem;
     position: relative;
   }
 `;
@@ -88,7 +92,7 @@ const FlagContainer = styled.div`
 
   @media (max-width: 480px) {
     margin-bottom: 10px;
-        margin-left: 7px;
+        margin-left: 4px;
         gap: 0.7rem;
   }
 `;
@@ -109,8 +113,8 @@ const FlagButton = styled.button`
   }
 
   @media (max-width: 480px) {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
   }
 `;
 

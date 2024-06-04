@@ -42,6 +42,9 @@ const SkillsContainer = styled(motion.div)`
 const SkillsWrapper = styled.div`
   display: flex;
   justify-content: center;
+  @media (max-width: 768px) {
+display: contents;
+  }
 `;
 
 const Column = styled.div`
@@ -74,6 +77,9 @@ const Column = styled.div`
   white-space: nowrap
 
   }
+  @media (max-width: 768px) {
+    display: contents;
+      }
 `;
 
 const ColumnText = styled.div`
@@ -138,6 +144,19 @@ const ParagraphItem = styled(SkillItem)`
 
   height: 810px;
   font-size: 17px;
+  @media (max-width: 768px) {
+    border-radius: 20px;
+    max-width: 700px;
+    position: relative;
+    bottom: -26px;
+    right: 394px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: 20px;
+    height: 860px;
+    width: 388px;
+    font-size: 16px;
+      }
 `;
 
 const FooterContainer = styled.div`
