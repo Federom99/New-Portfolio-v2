@@ -46,7 +46,7 @@ const CertificateImage = styled.img`
 `;
 
 const certificatesData = [
-  { id: 1, imageUrl: "../../src/images/henry.png" },
+  { id: 1, imageUrl: "../images/henry.png" },
   { id: 2, imageUrl: "../../src/images/javas.png" },
   { id: 3, imageUrl: "../../src/images/webb.png" },
   { id: 4, imageUrl: "../../src/images/ingless.png" },
