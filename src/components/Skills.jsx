@@ -135,7 +135,7 @@ const FooterContainer = styled.div`
   font-size: 1rem;
   @media (min-width: 768px) {
     position: absolute;
-    bottom: 85px;
+    bottom: 55px;
     right: 60rem;
     font-size: 1.5rem;
   }
