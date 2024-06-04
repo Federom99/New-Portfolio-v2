@@ -30,8 +30,7 @@ import Footer from "./Footer";
 import comunicationDark from "../images/communication-5-svgrepo-com (1).svg";
 import empathyDark from "../images/reconcile-help-empathy-forgive-svgrepo-com (1).svg";
 import { useTheme } from "styled-components";
-import { useLanguage } from './LanguageContext';
-
+import { useLanguage } from "./LanguageContext";
 
 const SkillsContainer = styled(motion.div)`
   background-color: transparent;
@@ -42,58 +41,49 @@ const SkillsContainer = styled(motion.div)`
 const SkillsWrapper = styled.div`
   display: flex;
   justify-content: center;
-  @media (max-width: 768px) {
-display: contents;
+  flex-wrap: wrap; 
+  @media (min-width: 768px) {
+    justify-content: space-between;
   }
 `;
 
 const Column = styled.div`
-  flex-basis: 30%;
-  margin-left: 0px;
-  margin-bottom: 150px;
-  position: relative;
-  left: 184px;
-  top: 70px;
-  white-space: nowrap
-
+  flex-basis: calc(
+    33.33% - 40px
+  ); 
+  margin: 0 20px;
+  margin-bottom: 50px; 
 
   h3 {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 12px;
-    margin-left: 40px;
+    margin-left: 20px;
     cursor: pointer;
   }
 
   ul {
     padding: 0;
-    font-size: 20px;
-
-    margin-left: 40px;
+    font-size: 18px;
   }
 
   li {
     margin-bottom: 12px;
     cursor: pointer;
-  white-space: nowrap
-
+    white-space: nowrap;
   }
-  @media (max-width: 768px) {
-    display: contents;
-      }
+
+  @media (min-width: 768px) {
+    flex-basis: calc(
+      33.33% - 20px
+    );
+    margin-bottom: 0;
+  }
 `;
 
 const ColumnText = styled.div`
-  flex-basis: 70%;
-  position: relative;
-  left: 350px;
-  width: 800px;
-
-  h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
-    margin-left: 40px;
-    cursor: pointer;
-  }
+  flex-basis: 88%; 
+  margin-right: 30px;
+  max-width: 800px; 
 `;
 
 const SkillItem = styled(motion.li)`
@@ -112,7 +102,6 @@ const SkillIcon = styled.img`
   height: 28px;
   fill: ${({ theme }) => theme.text};
   filter: ${({ theme }) => (theme.mode === "light" ? "invert(1)" : "none")};
-
   margin-right: 10px;
 `;
 
@@ -132,59 +121,45 @@ const SkillTooltip = styled(motion.div)`
 const ParagraphItem = styled(SkillItem)`
   background: ${({ theme }) => theme.gradient};
   border-radius: 20px;
-  max-width: 700px;
-  position: relative;
-  bottom: 40px;
-
-  overflow-y: auto;
-
-  overflow-x: hidden;
-
-  margin-left: 20px;
-
-  height: 810px;
-  font-size: 17px;
-  @media (max-width: 768px) {
-    border-radius: 20px;
-    max-width: 700px;
+  max-width: 500px;
+  padding: 20px; 
+  margin: 0 auto; 
+  @media (min-width: 768px) {
     position: relative;
-    bottom: -26px;
-    right: 394px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    margin-left: 20px;
-    height: 860px;
-    width: 388px;
-    font-size: 16px;
-      }
+    left: 1100px;
+    bottom: 750px;
+  }
 `;
 
 const FooterContainer = styled.div`
-  position: absolute;
-  bottom: 45px;
-  right: 75rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  @media (min-width: 768px) {
+    position: absolute;
+    bottom: 85px;
+    right: 60rem;
+    font-size: 1.5rem;
+  }
 `;
 
 const translations = {
   en: {
-    frontend: 'Frontend',
-    backend: 'Backend',
-    softSkills: 'Soft Skills',
-    Communication: 'Communication',
-    Teamwork: 'Teamwork',
-    Charisma: 'Charisma',
-    Empathy: 'Empathy',
-    Responsibility: 'Responsibility',
-    Adaptability: 'Adaptability',
-    ProblemSolving: 'Problem solving',
+    frontend: "Frontend",
+    backend: "Backend",
+    softSkills: "Soft Skills",
+    Communication: "Communication",
+    Teamwork: "Teamwork",
+    Charisma: "Charisma",
+    Empathy: "Empathy",
+    Responsibility: "Responsibility",
+    Adaptability: "Adaptability",
+    ProblemSolving: "Problem solving",
     paragraph1: (
       <div>
         <h4>How do I use my Frontend skills in my work?</h4>
 
         <p>
-          JavaScript & TypeScript: Harnessing the power of both languages to build
-          robust and scalable frontend solutions.
+          JavaScript & TypeScript: Harnessing the power of both languages to
+          build robust and scalable frontend solutions.
           <br />
           <br />
           React: Utilizing React for building modular and reusable components,
@@ -222,8 +197,8 @@ const translations = {
 
         <p>
           On the backend side, I delve into a robust stack of technologies and
-          tools to power our services and ensure seamless functionality. Here is a
-          breakdown:
+          tools to power our services and ensure seamless functionality. Here is
+          a breakdown:
           <br />
           <br />
           JavaScript & Node.js: Leveraging the versatility of Node.js and
@@ -249,8 +224,8 @@ const translations = {
           <br />
           <br />
           Serverless: Implementing serverless architecture to optimize resource
-          utilization and streamline backend operations, enhancing scalability and
-          cost-efficiency
+          utilization and streamline backend operations, enhancing scalability
+          and cost-efficiency
         </p>
       </div>
     ),
@@ -259,28 +234,28 @@ const translations = {
         <h4>How do I use my Soft Skills in my work?</h4>
 
         <p>
-          Communication: In my work, I use strong communication skills to clearly
-          express my ideas and opinions in meetings, emails, and presentations.
-          Additionally, I am always attentive to the needs of my colleagues and
-          clients, ensuring I understand their perspectives and communicate
-          effectively to achieve our common goals.
+          Communication: In my work, I use strong communication skills to
+          clearly express my ideas and opinions in meetings, emails, and
+          presentations. Additionally, I am always attentive to the needs of my
+          colleagues and clients, ensuring I understand their perspectives and
+          communicate effectively to achieve our common goals.
           <br />
           <br />
-          Teamwork: I am an active member and collaborator in work teams, sharing
-          my knowledge and skills to contribute to the success of the project. I
-          am open to hearing the ideas of my colleagues and am committed to
-          working together to overcome any challenges that arise.
+          Teamwork: I am an active member and collaborator in work teams,
+          sharing my knowledge and skills to contribute to the success of the
+          project. I am open to hearing the ideas of my colleagues and am
+          committed to working together to overcome any challenges that arise.
           <br />
           <br />
           Charisma: My positive presence and my ability to connect with others
-          allow me to build strong relationships in the work environment. I always
-          seek to positively influence my colleagues and clients, generating trust
-          and motivation in our work together.
+          allow me to build strong relationships in the work environment. I
+          always seek to positively influence my colleagues and clients,
+          generating trust and motivation in our work together.
           <br />
           <br />
           Empathy: I strive to understand the perspectives and feelings of my
-          colleagues and clients, allowing me to approach situations from a place
-          of understanding and respect.
+          colleagues and clients, allowing me to approach situations from a
+          place of understanding and respect.
           <br />
           <br />
           Responsibility: I am aware of the importance of fulfilling my
@@ -294,51 +269,51 @@ const translations = {
     // Otros textos para traducir
   },
   es: {
-    frontend: 'Frontend',
-    backend: 'Backend',
-    softSkills: 'Habilidades Blandas',
-    Communication: 'Comunicación',
-    Teamwork: 'Trabajo en equipo',
-    Charisma: 'Carisma',
-    Empathy: 'Empatía',
-    Responsibility: 'Responsabilidad',
-    Adaptability: 'Adaptabilidad',
-    ProblemSolving: 'Resolución de problemas',
+    frontend: "Frontend",
+    backend: "Backend",
+    softSkills: "Habilidades Blandas",
+    Communication: "Comunicación",
+    Teamwork: "Trabajo en equipo",
+    Charisma: "Carisma",
+    Empathy: "Empatía",
+    Responsibility: "Responsabilidad",
+    Adaptability: "Adaptabilidad",
+    ProblemSolving: "Resolución de problemas",
     paragraph1: (
       <div>
         <h4>¿Cómo utilizo mis habilidades de Frontend en mi trabajo?</h4>
 
         <p>
-          JavaScript y TypeScript: aprovechando el poder de ambos lenguajes para construir
-          soluciones frontend robustas y escalables.
+          JavaScript y TypeScript: aprovechando el poder de ambos lenguajes para
+          construir soluciones frontend robustas y escalables.
           <br />
           <br />
-          React: utilizando React para construir componentes modulares y reutilizables,
-          asegurando un proceso de desarrollo ágil.
+          React: utilizando React para construir componentes modulares y
+          reutilizables, asegurando un proceso de desarrollo ágil.
           <br />
           <br />
-          Redux Saga: empleando Redux Saga para gestionar lógica asincrónica compleja,
-          asegurando un flujo de datos fluido dentro de la aplicación.
+          Redux Saga: empleando Redux Saga para gestionar lógica asincrónica
+          compleja, asegurando un flujo de datos fluido dentro de la aplicación.
           <br />
           <br />
-          Sass: utilizando Sass para estilizar y mantener la consistencia
-          en toda la aplicación, mejorando la experiencia general del usuario.
+          Sass: utilizando Sass para estilizar y mantener la consistencia en
+          toda la aplicación, mejorando la experiencia general del usuario.
           <br />
           <br />
-          Jest: aprovechando Jest para pruebas unitarias, asegurando la confiabilidad y
-          estabilidad de los componentes frontend.
+          Jest: aprovechando Jest para pruebas unitarias, asegurando la
+          confiabilidad y estabilidad de los componentes frontend.
           <br />
           <br />
-          Axios: integrando Axios para manejar eficientemente las solicitudes HTTP,
-          facilitando la comunicación fluida con los servicios backend.
+          Axios: integrando Axios para manejar eficientemente las solicitudes
+          HTTP, facilitando la comunicación fluida con los servicios backend.
           <br />
           <br />
           Chart.js: implementando Chart.js para visualizar datos e ideas,
           mejorando la presentación de información para los usuarios.
           <br />
           <br />
-          Lodash: aprovechando Lodash para funciones de utilidad y manipulación de datos,
-          optimizando la eficiencia del código frontend.
+          Lodash: aprovechando Lodash para funciones de utilidad y manipulación
+          de datos, optimizando la eficiencia del código frontend.
         </p>
       </div>
     ),
@@ -347,35 +322,36 @@ const translations = {
         <h4>¿Cómo utilizo mis habilidades de Backend en mi trabajo?</h4>
 
         <p>
-          En el lado del backend, profundizo en un conjunto robusto de tecnologías y
-          herramientas para impulsar nuestros servicios y garantizar una funcionalidad perfecta. Aquí está
-          un desglose:
+          En el lado del backend, profundizo en un conjunto robusto de
+          tecnologías y herramientas para impulsar nuestros servicios y
+          garantizar una funcionalidad perfecta. Aquí está un desglose:
           <br />
           <br />
           JavaScript y Node.js: aprovechando la versatilidad de Node.js y
           JavaScript para construir servicios backend escalables y eficientes.
           <br />
           <br />
-          Express.js: utilizando Express.js para desarrollar aplicaciones de servidor eficientes y modulares,
-          facilitando el desarrollo rápido.
+          Express.js: utilizando Express.js para desarrollar aplicaciones de
+          servidor eficientes y modulares, facilitando el desarrollo rápido.
           <br />
           <br />
-          Docker: abrazando Docker para la contenerización, permitiendo una implementación perfecta y
-          escalado de servicios backend en diferentes
+          Docker: abrazando Docker para la contenerización, permitiendo una
+          implementación perfecta y escalado de servicios backend en diferentes
           entornos.
           <br />
           <br />
-          PostgreSQL: aprovechando PostgreSQL para el almacenamiento y gestión de datos,
-          garantizando confiabilidad e integridad de datos.
+          PostgreSQL: aprovechando PostgreSQL para el almacenamiento y gestión
+          de datos, garantizando confiabilidad e integridad de datos.
           <br />
           <br />
-          AWS: aprovechando el poder de Amazon Web Services (AWS) para infraestructura y servicios en la nube,
-          permitiendo una arquitectura backend escalable y resiliente.
+          AWS: aprovechando el poder de Amazon Web Services (AWS) para
+          infraestructura y servicios en la nube, permitiendo una arquitectura
+          backend escalable y resiliente.
           <br />
           <br />
-          Serverless: implementando arquitectura serverless para optimizar la utilización de recursos y
-          simplificar las operaciones del backend, mejorando la escalabilidad y
-          eficiencia en costos.
+          Serverless: implementando arquitectura serverless para optimizar la
+          utilización de recursos y simplificar las operaciones del backend,
+          mejorando la escalabilidad y eficiencia en costos.
         </p>
       </div>
     ),
@@ -384,34 +360,37 @@ const translations = {
         <h4>¿Cómo utilizo mis habilidades blandas en mi trabajo?</h4>
 
         <p>
-          Comunicación: En mi trabajo, utilizo habilidades de comunicación fuertes para expresar claramente
-          mis ideas y opiniones en reuniones, correos electrónicos y presentaciones.
-          Además, siempre estoy atento a las necesidades de mis colegas y
-          clientes, asegurándome de entender sus perspectivas y comunicarme
-          eficazmente para lograr nuestros objetivos comunes.
+          Comunicación: En mi trabajo, utilizo habilidades de comunicación
+          fuertes para expresar claramente mis ideas y opiniones en reuniones,
+          correos electrónicos y presentaciones. Además, siempre estoy atento a
+          las necesidades de mis colegas y clientes, asegurándome de entender
+          sus perspectivas y comunicarme eficazmente para lograr nuestros
+          objetivos comunes.
           <br />
           <br />
-          Trabajo en equipo: Soy un miembro activo y colaborador en equipos de trabajo, compartiendo
-          mi conocimiento y habilidades para contribuir al éxito del proyecto. Yo
-          estoy abierto a escuchar las ideas de mis colegas y estoy comprometido a
-          trabajar juntos para superar cualquier desafío que surja.
+          Trabajo en equipo: Soy un miembro activo y colaborador en equipos de
+          trabajo, compartiendo mi conocimiento y habilidades para contribuir al
+          éxito del proyecto. Yo estoy abierto a escuchar las ideas de mis
+          colegas y estoy comprometido a trabajar juntos para superar cualquier
+          desafío que surja.
           <br />
           <br />
-          Carisma: Mi presencia positiva y mi capacidad para conectar con los demás
-          me permiten construir relaciones sólidas en el entorno laboral. Siempre
-          busco influir positivamente en mis colegas y clientes, generando confianza
-          y motivación en nuestro trabajo conjunto.
+          Carisma: Mi presencia positiva y mi capacidad para conectar con los
+          demás me permiten construir relaciones sólidas en el entorno laboral.
+          Siempre busco influir positivamente en mis colegas y clientes,
+          generando confianza y motivación en nuestro trabajo conjunto.
           <br />
           <br />
-          Empatía: Me esfuerzo por comprender las perspectivas y sentimientos de mis
-          colegas y clientes, lo que me permite abordar situaciones desde un lugar
-          de comprensión y respeto.
+          Empatía: Me esfuerzo por comprender las perspectivas y sentimientos de
+          mis colegas y clientes, lo que me permite abordar situaciones desde un
+          lugar de comprensión y respeto.
           <br />
           <br />
           Responsabilidad: Soy consciente de la importancia de cumplir con mis
-          responsabilidades y compromisos en el trabajo. Siempre cumplo con los plazos establecidos y
-          asumo la responsabilidad de mis acciones, manteniendo la
-          confianza de mis colegas y superiores en mi capacidad para cumplir con las expectativas laborales.
+          responsabilidades y compromisos en el trabajo. Siempre cumplo con los
+          plazos establecidos y asumo la responsabilidad de mis acciones,
+          manteniendo la confianza de mis colegas y superiores en mi capacidad
+          para cumplir con las expectativas laborales.
         </p>
       </div>
     ),
@@ -666,7 +645,7 @@ const Skills = () => {
       >
         <SkillsWrapper>
           <Column>
-          <h3>{translations[language].frontend}</h3>
+            <h3>{translations[language].frontend}</h3>
 
             <ul>
               {frontendSkills.map((skill, index) => (
@@ -686,7 +665,7 @@ const Skills = () => {
             </ul>
           </Column>
           <Column>
-          <h3>{translations[language].backend}</h3>
+            <h3>{translations[language].backend}</h3>
             <ul>
               {backendSkills.map((skill, index) => (
                 <SkillItem
@@ -705,7 +684,7 @@ const Skills = () => {
             </ul>
           </Column>
           <Column>
-          <h3>{translations[language].softSkills}</h3>
+            <h3>{translations[language].softSkills}</h3>
 
             <ul>
               {softSkills.map((skill, index) => (
@@ -718,7 +697,7 @@ const Skills = () => {
                     {skill.imgSrc && (
                       <SkillIcon src={skill.imgSrc} alt={skill.name} />
                     )}
-          <SkillName>{translations[language][skill.name]}</SkillName>
+                    <SkillName>{translations[language][skill.name]}</SkillName>
                   </SkillContent>
                 </SkillItem>
               ))}
@@ -728,8 +707,9 @@ const Skills = () => {
             <ul>
               <ParagraphItem>
                 <SkillContent>
-                <SkillName>{translations[language][`paragraph${currentParagraph + 1}`]}</SkillName>
-
+                  <SkillName>
+                    {translations[language][`paragraph${currentParagraph + 1}`]}
+                  </SkillName>
                 </SkillContent>
               </ParagraphItem>
             </ul>
