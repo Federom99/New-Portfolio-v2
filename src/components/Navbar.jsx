@@ -139,7 +139,10 @@ const Navbar = ({ toggleTheme, theme }) => {
         <Link to="/skills">{translations[language].skills}</Link>
         <Link to="/projects">{translations[language].projects}</Link>
         <Link to="/certificates">{translations[language].certificates}</Link>
-        <Link to="../../src/images/CV Federico Romero - FullStack Software Developer -2024. EN.pdf"> <FontAwesomeIcon icon={faFileDownload} />    {translations[language].cv}</Link>
+        <a href="../../src/images/CV Federico Romero - FullStack Software Developer -2024. EN.pdf" download>
+          <FontAwesomeIcon icon={faFileDownload} />
+          {translations[language].cv}
+        </a> 
       </NavLinks>
       <FlagContainer>
         <FlagButton onClick={() => toggleLanguage('en')}>
