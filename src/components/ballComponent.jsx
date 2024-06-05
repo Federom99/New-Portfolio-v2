@@ -17,6 +17,10 @@ const Ball = styled.div`
   background-color: ${({ theme }) => theme.ballColor};
   border-radius: 50%;
   animation: ${bounce} 2s infinite ease-in-out;
+  @media (max-width: 768px) {
+    width: 5px;
+  height: 5px;
+  }
 `;
 
 const AnimatedBackgroundContainer = styled.div`

@@ -21,7 +21,7 @@ const ImageContainer = styled(animated.div)`
   margin-top: 2rem;
   @media (max-width: 768px) {
     
-    margin-right: 50px;
+    margin-right: 10px;
 
   }
 `;
@@ -42,7 +42,7 @@ const DiagonalText = styled(animated.div)`
   text-align: center;
   @media (max-width: 768px) {
     
-    margin-right: 50px;
+    margin-right: 10px;
 
   }
 `;
@@ -71,7 +71,7 @@ const AnimatedIntroductionText = styled(animated.div)`
   text-align: center;
   @media (max-width: 768px) {
     
-    margin-right: 50px;
+    margin-right: 10px;
 
   }
 `;
@@ -86,7 +86,7 @@ const FooterContainer = styled.footer`
     
     position: relative;
         
-        right: 23px;
+        right: 10px;
 
   }
 `;
