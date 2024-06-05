@@ -42,15 +42,20 @@ const NavLinks = styled.div`
   @media (max-width: 768px) {
     display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')}; // Oculta los enlaces si isOpen es falso
     flex-direction: column;
-    align-items: center;
-    font-size: 16px;
     gap: 1rem;
-    margin-left: 0;
+    font-size: 20px;
+    position: absolute;
+    top: 80px;
+    left: -28px;
+    background-color: ${({ theme }) => theme.background};
+    border: 2px solid ${({ theme }) => theme.accent};
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   @media (max-width: 480px) {
-    font-size: 11px;
-    gap: 0.1rem;
+    font-size: 15px;
+    gap: 1.1rem;
   }
 `;
 
