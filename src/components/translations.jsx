@@ -4,6 +4,7 @@ const translations = {
       skills: 'Skills',
       projects: 'Projects',
       certificates: 'Certificates',
+      cv: "Download Resume",
       greeting: "Hello, I'm Federico Romero!",
     role: "FullStack Software Engineer.",
     introduction: [
@@ -20,6 +21,7 @@ const translations = {
       skills: 'Habilidades',
       projects: 'Proyectos',
       certificates: 'Certificados',
+      cv: "Descargar CV",
       greeting: "¡Hola, soy Federico Romero!",
       role: "Ingeniero de Software FullStack.",
       introduction: [

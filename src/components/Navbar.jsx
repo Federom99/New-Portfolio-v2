@@ -2,7 +2,7 @@ import { useState } from 'react'; // Importa el hook useState
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'; // Agrega el ícono para el menú de hamburguesa
+import { faSun, faMoon, faBars, faTimes, faFileDownload  } from '@fortawesome/free-solid-svg-icons'; // Agrega el ícono para el menú de hamburguesa
 import { useLanguage } from './LanguageContext';
 import translations from './translations';
 import usFlag from '../../src/images/Flag_of_the_United_States_(DoS_ECA_Color_Standard).svg.png';
@@ -139,6 +139,7 @@ const Navbar = ({ toggleTheme, theme }) => {
         <Link to="/skills">{translations[language].skills}</Link>
         <Link to="/projects">{translations[language].projects}</Link>
         <Link to="/certificates">{translations[language].certificates}</Link>
+        <Link to="../../src/images/CV Federico Romero - FullStack Software Developer -2024. EN.pdf"> <FontAwesomeIcon icon={faFileDownload} />    {translations[language].cv}</Link>
       </NavLinks>
       <FlagContainer>
         <FlagButton onClick={() => toggleLanguage('en')}>
