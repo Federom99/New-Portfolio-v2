@@ -7,6 +7,7 @@ import { useLanguage } from './LanguageContext';
 import translations from './translations';
 import usFlag from '../../src/images/Flag_of_the_United_States_(DoS_ECA_Color_Standard).svg.png';
 import esFlag from '../../src/images/sp-flag.jpg';
+import cv from "../../src/CV Federico Romero - FullStack Software Developer -2024. EN.pdf"
 
 const NavbarContainer = styled.nav`
   position: fixed;
@@ -139,7 +140,7 @@ const Navbar = ({ toggleTheme, theme }) => {
         <Link to="/skills">{translations[language].skills}</Link>
         <Link to="/projects">{translations[language].projects}</Link>
         <Link to="/certificates">{translations[language].certificates}</Link>
-        <a href="../../src/CV Federico Romero - FullStack Software Developer -2024. EN.pdf" download>
+        <a href= {cv} download>
           <FontAwesomeIcon icon={faFileDownload} />
           {translations[language].cv}
         </a> 
