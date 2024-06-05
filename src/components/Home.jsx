@@ -8,108 +8,91 @@ import translations from "./translations";
 
 const HomeContainer = styled.div`
   display: flex;
-  font-family: "Quicksand", sans-serif;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.text};
   padding: 2rem;
-  text-align: center;
 `;
 
 const ImageContainer = styled(animated.div)`
-  position: relative;
-  left: 1000px;
-  bottom: 350px;
+  margin-top: 2rem;
   @media (max-width: 768px) {
-    position: relative;
-    left: 0px;
-    bottom: 223px;
+    
+    margin-right: 50px;
+
   }
 `;
 
 const Image = styled(animated.img)`
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   border-radius: 50%;
-  @media (max-width: 768px) {
-    width: 109px;
-    border-radius: 50%;
-  }
-`;
-
-const FooterContainer = styled(animated.div)`
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  font-size: 1.5rem;
-  @media (max-width: 768px) {
-    position: absolute;
-    top: 944px;
-    left: 20px;
-    font-size: 1.1rem;
-  }
 `;
 
 const DiagonalText = styled(animated.div)`
-  font-size: 1.3rem;
-  max-width: 500px;
-  position: absolute;
-  bottom: 70px;
-  right: 140px;
+  margin-top: 2rem;
+  padding: 15px;
+  
   background: ${({ theme }) => theme.gradient};
   border-radius: 20px;
+  max-width: 80%;
+  text-align: center;
   @media (max-width: 768px) {
-    margin-left: 11px;
-    font-size: 1rem;
-    max-width: 499px;
-    position: absolute;
-    bottom: -172px;
-    right: 11px;
-    border-radius: 20px;
+    
+    margin-right: 50px;
+
   }
 `;
 
 const TypingHeader = styled.div`
   font-size: 2.5rem;
-  position: relative;
-  bottom: 100px;
-  right: 120px;
-  text-align: left;
+  margin-top: 2rem;
+  text-align: center;
   background-color: ${({ theme }) => theme.text};
   color: ${({ theme }) => theme.background};
   padding: 0.5rem;
   border-radius: 20px;
   @media (max-width: 768px) {
-    font-size: 1rem;
-    position: relative;
-    bottom: 20px;
-    right: 0px;
-    text-align: left;
-    padding: 0.5rem;
-    border-radius: 20px;
+    font-size: 1.1rem;
+    margin-right: 50px;
+
   }
 `;
 
 const AnimatedIntroductionText = styled(animated.div)`
-  font-size: 1.3rem;
-  text-align: left;
-  border-radius: 20px;
+  margin-top: 2rem;
+  padding: 15px;
   background: ${({ theme }) => theme.gradient};
+  border-radius: 20px;
+  max-width: 80%;
+  text-align: center;
   @media (max-width: 768px) {
-    margin-bottom: 260px;
-    /* margin-left: -2px; */
-    /* bottom: 120px; */
-    width: 298px;
-    font-size: 1rem;
-    text-align: left;
-    border-radius: 20px;
+    
+    margin-right: 50px;
+
+  }
+`;
+
+const FooterContainer = styled.footer`
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.text};
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  @media (max-width: 768px) {
+    
+    position: relative;
+        
+        right: 23px;
+
   }
 `;
 
 const Home = () => {
-  const { language } = useLanguage(); 
+  const { language } = useLanguage();
   const props = useSpring({
     opacity: 1,
     from: { opacity: 0 },
@@ -134,7 +117,6 @@ const Home = () => {
           loop={true}
         />
       </TypingHeader>
-      <br />
       <TypingHeader>
         <Typing
           text={[translations[language].role]}
@@ -145,7 +127,7 @@ const Home = () => {
           loop={true}
         />
       </TypingHeader>
-      
+
       <AnimatedIntroductionText style={props}>
         {translations[language].introduction.map((line, index) => (
           <p key={index}>{line}</p>
@@ -153,7 +135,7 @@ const Home = () => {
       </AnimatedIntroductionText>
 
       <ImageContainer style={imageProps}>
-        <Image src={myImage} alt="Federico Romero" />{" "}
+        <Image src={myImage} alt="Federico Romero" />
       </ImageContainer>
 
       <DiagonalText style={props}>
