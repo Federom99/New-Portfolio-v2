@@ -7,7 +7,7 @@ import { useLanguage } from './LanguageContext';
 import translations from './translations';
 import usFlag from '../../src/images/Flag_of_the_United_States_(DoS_ECA_Color_Standard).svg.png';
 import esFlag from '../../src/images/sp-flag.jpg';
-import cv from "../../src/CV Federico Romero - FullStack Software Developer -2024. EN.pdf"
+import cv from "../../src/CV Federico Romero - FullStack Software Developer -2025. EN.pdf"
 
 const NavbarContainer = styled.nav`
   position: fixed;
