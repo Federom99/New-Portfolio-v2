@@ -36,8 +36,9 @@ const Footer = () => {
       <FooterSection>
         <FooterLink href="https://www.linkedin.com/in/federico-romero-full-stack-dev/" target="_blank" rel="noopener noreferrer">LinkedIn</FooterLink>
         <FooterLink href="mailto:federo.15.99@gmail.com">Email</FooterLink>
-        <FooterLink href="https://gitlab.com/federico.romero2" target="_blank" rel="noopener noreferrer">GitLab</FooterLink>
+        <FooterLink href="https://gitlab.com/federico.romero2" target="_blank" rel="noopener noreferrer">GitLab(Legacy)</FooterLink>
         <FooterLink href="https://github.com/Federom99" target="_blank" rel="noopener noreferrer">GitHub</FooterLink>
+        <FooterLink href="https://gitlab.com/federicoagustin.romero" target="_blank" rel="noopener noreferrer">GitLab</FooterLink>
       </FooterSection>
       <CopyrightText>© 2024 Romero Federico. All rights reserved.</CopyrightText>
     </FooterContainer>
