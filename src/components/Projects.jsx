@@ -114,21 +114,6 @@ const Projects = () => {
         demoLink: "https://github.com/Federom99/PI---VideoGames",
       },
       {
-        title: "Country Quizz",
-        description:
-          "This application is a country quiz in which the questions change randomly. They are questions related to the capitals of the different countries of the world. I had the idea to do it from devchallenges.io.",
-        repoLink: "https://countryapp-rf.netlify.app/",
-        demoLink: "https://countryapp-rf.netlify.app/",
-      },
-      {
-        title: "Crypto Coins",
-        description:
-          "This was one of my first projects and technical tests. It was my first time using angular and typescript. The application is based on showing the most recognized cryptocurrencies of the moment.",
-        repoLink: "https://github.com/Federom99/App-coins",
-        demoLink:
-          "https://www.linkedin.com/posts/federico-romero-full-stack-dev_red-desarrollador-angular-activity-6949887365234446337-f72Q/?utm_source=share&utm_medium=member_desktop",
-      },
-      {
         title: "Lua Press on Nails",
         description:
           "This project was for a nail entrepreneur. Which wanted its website so that its clients can see the services and forms of contact that it offers. Here you can see the nails that she made, information to how to measure your nails, and the ways to contact her. ",

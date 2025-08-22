@@ -8,7 +8,7 @@ const translations = {
       greeting: "Hello, I'm Federico Romero!",
     role: "FullStack Software Engineer.",
     introduction: [
-      "At 24 years old, I am constantly looking for opportunities to grow and learn in the world of technology.",
+      "At 26 years old, I am constantly looking for opportunities to grow and learn in the world of technology.",
       "My approach at work is based on organization and responsibility.",
       "I am passionate about teamwork and adapt quickly to any situation.",
       "I have a C1 level of English and I am determined to perfect it even further."
@@ -25,7 +25,7 @@ const translations = {
       greeting: "¡Hola, soy Federico Romero!",
       role: "Ingeniero de Software FullStack.",
       introduction: [
-        "A los 24 años, estoy constantemente buscando oportunidades para crecer y aprender en el mundo de la tecnología.",
+        "A los 26 años, estoy constantemente buscando oportunidades para crecer y aprender en el mundo de la tecnología.",
         "Mi enfoque en el trabajo se basa en la organización y la responsabilidad.",
         "Me apasiona el trabajo en equipo y me adapto rápidamente a cualquier situación.",
         "Tengo un nivel C1 de inglés y estoy decidido a perfeccionarlo aún más."

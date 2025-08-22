@@ -139,7 +139,7 @@ const Navbar = ({ toggleTheme, theme }) => {
         <Link to="/">{translations[language].home}</Link>
         <Link to="/skills">{translations[language].skills}</Link>
         <Link to="/projects">{translations[language].projects}</Link>
-        <Link to="/certificates">{translations[language].certificates}</Link>
+        <Link to="/certificates">{translations[language].certificates}</Link> 
         <a href= {cv} download>
           <FontAwesomeIcon icon={faFileDownload} />
           {translations[language].cv}
